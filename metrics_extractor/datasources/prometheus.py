@@ -88,8 +88,8 @@ class PrometheusSource(DataSource):
             bool: True if the query contains functions, False otherwise
         """
         # Pattern to match functions like rate(), sum(), etc.
-        function_pattern = r'^[a-zA-Z_:][a-zA-Z0-9_:]*\('
-        return bool(re.match(function_pattern, query.strip()))
+        function_pattern = r'[a-zA-Z_:][a-zA-Z0-9_:]*\('
+        return bool(re.findall(function_pattern, query.strip()))
 
     def get_data(
         self,
