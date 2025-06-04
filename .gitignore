@@ -205,5 +205,6 @@ pyrightconfig.json
 
 # Local data files
 metrics/
+plots/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,jupyternotebooks
